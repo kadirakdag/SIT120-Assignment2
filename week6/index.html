@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang= "en">
+    <head> 
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content=""width=device-width, inital-scale="1.0" />
+        <!-- development version, includes helpful console warnings -->
+        <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+        <title>Document</title>
+    </head>
+    <body>
+        <div id="app">
+            <p>User name</p>
+            <input 
+                v-model="name" 
+                type="text" 
+                placeholder="Please enter user name" 
+            />
+            <p> You entered the username: {{ name }} </p>
+            <p>Password</p>
+            <input type="password" placeholder="Please enter password" />
+            <p>Range</p>
+            <input type="range" />
+            <p>number</p>
+            <input type="number" />
+            <p> month</p>
+            <input type="month" />
+            <p></p>
+            <input type="checkbox" id="checkbox" v-model="checked" />
+            <label for="checkbox">{{ checked }}</label>
+            <div></div>
+            <input type="checkbox" id="jack" value="1" v-model="checkedNames" />
+            <label for="jack">Jack</label>
+            <input type="checkbox" id="john" value="2" v-model="checkedNames" />
+            <label for="john">John</label>
+            <input type="checkbox" id="paul" value="3" v-model="checkedNames"/>
+            <label for="paul">Paul</label>
+            <br />
+            <span>Checked names: {{ checkedNames }}</span>
+            <br />
+            <br />
+
+            <select v-model="selected">
+              <option value="" disabled>please select one</option>
+              <option v-for="n in 4">{{ n }}</option>
+            </select>
+            <span> Selected: {{selected}}</span>
+
+            
+        </div>
+    </body>
+</html>
+
+<script>
+    var app = new Vue({
+        el: '#app',
+        data: {
+            message: 'Hello Vue!',
+            name: 'kadir',
+            checked: false,
+            checkedNames: [],
+            selected: 1,
+        },
+    });
+</script>
+
+
