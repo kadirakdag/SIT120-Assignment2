@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>
+        This is the title!
+    </title>
+    <style>
+        h1 {
+            color: blue;
+        }
+    </style>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+</head>
+
+<body>
+    <h1>
+        This is my </br> website
+    </h1>
+    <div style="width: 100px"> This is div section </div>
+    <h2 style="color:blue"> This is my Lucario </h2>
+    <img src="images/lucario.png" alt="This is my Lucario" style="width:100"> </img>
+
+    <div id="app">
+        <!-- check the data -->
+
+        <div v-for="todo in todos" :key="todo.title" :style="{ textDecoration: todo.checked? 'line-through':'none' }">
+            <input type="checkbox" v-model="todo.checked"/>
+            Did you see the Lucario?
+        </div>
+    </div>
+
+    <h3 style="width: 300px"> This is my table </h3>
+    <table style="width:100%" <tr>
+        <th> Favourite Pokemon</th>
+        <th> Favourite Gym Leader</th>
+        <th> Favourite Type</th>
+        </tr>
+        <tr>
+            <th> Staryu</th>
+            <th> Misty</th>
+            <th> Water</th>
+        </tr>
+        <tr>
+            <th> Geodude</th>
+            <th> Brock</th>
+            <th> Rock</th>
+        </tr>
+        <tr>
+            <th> Persian</th>
+            <th> Giovanni</th>
+            <th> Normal</th>
+        </tr>
+    </table>
+
+    <h4> This is a list</h4>
+    <ul>
+        <li>I</li>
+        <li>Wanna</li>
+        <li>Be</li>
+        <li>The</li>
+        <li>Very</li>
+        <li>Best</li>
+    </ul>
+
+    <h4 id="header3"> This is a column</h4>
+    <div class="newspaper">
+        Pokemon Pokemon Pokemon Pokemon Pokemon Pokemon Pokemon Pokemon Pokemon Pokemon Pokemon Pokemon Pokemon
+        Pokemon
+        Pokemon Pokemon Pokemon Pokemon Pokemon Pokemon Pokemon Pokemon Pokemon Pokemon Pokemon Pokemon Pokemon
+        Pokemon
+    </div>
+
+    <h5> This is a link </h5>
+    <a href="https://www.google.com"> Visit google </a>
+
+    <h5> Javascript practice </h5>
+    <button id="btn" onclick="showAlert()"> this is a button </button>
+
+    <script>
+        // this is a comment
+        function showAlert() {
+            alert("Hi you just clicked the button")
+            var heading3 = document.getElementById("header3")
+            heading3.style.color = "red";
+
+        }
+
+
+    </script>
+
+    <button id="btn" onclick="document.getElementById('demo').innerHTML = Date()"> Click me to display date and
+        time.
+    </button>
+    <p id="demo"></p>
+
+</body>
+
+</html>
