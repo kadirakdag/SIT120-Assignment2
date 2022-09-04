@@ -1,0 +1,41 @@
+h5 {
+    color: purple;
+}
+
+body {
+    background-color: aliceblue;
+}
+
+div {
+    column-count: 3;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+  }
+
+  table {
+    width: 100%;
+    display: block;
+  }
+
+  * {
+    box-sizing: border-box;
+  }
+
+  .header {
+    border: 1px solid red;
+    padding: 15px;
+  }
+  @media screen and (max-width: 600px) {
+    .topnav a {
+      float: none;
+      width: 100%;
+    }
+  }
+  @media screen and (max-width: 600px) {
+    body {
+      background-color: olive;
+    }
+  }
